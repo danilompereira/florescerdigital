@@ -93,7 +93,10 @@ nav a{
     transition: 500ms;
 }
 
-nav a:hover, nav a:focus{background-color: rgb(221, 216, 216);}
+nav a:hover, nav a:focus{
+    background-color: rgb(221, 216, 216);
+    border-radius: 5px;
+}
 
 /* Regras de conteúdo (articles) */
 
