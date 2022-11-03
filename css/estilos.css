@@ -17,6 +17,8 @@ h4{font-size: 24px;}
 
 .gestao h4{text-align: center;}
 
+.gestao{margin-right: 15px;}
+
 
 figcaption{text-align: center;}
 
@@ -42,6 +44,7 @@ figcaption{text-align: center;}
 
 #instagram{
     flex-direction: row-reverse;
+    text-align: right;
 }
 
 
@@ -251,6 +254,11 @@ form{
 }
 form:hover{opacity: 1;}
 
+
+.gestao ul{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
 
 #nome, #email, #telefone{
     width: 100%;
