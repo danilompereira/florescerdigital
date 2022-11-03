@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Simplicity</title>
+    <link rel="stylesheet" href="css/estilos.css">
+   </head>
+
+<body>
+    <!-- Cabeçalho -->
+    <div id="topo">
+      <header class="limitador" >
+      
+          <a href="index.html"><img src="imagens/Florecer Digital (200x50).png" alt=""></a>
+          <nav>
+              <a href="index.html">Home</a>
+              <a href="servicos.html">Serviços</a>
+              <a href="contato.html">Contato</a>
+          </nav>
+      </header>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <article class="limitador conteudo">
+            <h2>Conecte-se conosco</h2>
+            <p>Entre em contato conosco para saber como podemos ajudar sua marca a crescer.</p>
+            <p>Temos todas as ferramentas necessárias para desenvolver o seu negócio e guiá-lo ao
+                sucesso. Tudo o que você precisa fazer é entrar em contato conosco.</p>
+        
+            <p>Atenção: os campos Nome, email são obrigatórios.</p>
+        
+            <!-- aqui colocaremos um formulário -->
+            <!-- Container para todos os campos do formulário (obrigatório) -->
+            <div id="efeito">
+              <form action="https://formspree.io/f/xyyvjovv" method="post" id="my-form">
+              <div class="dados" >
+                  <p><input type="text" name="nome" placeholder="Nome*" required></p>
+                  <p><input type="text" name="email" placeholder="E-mail*" required></p>
+                  <p><input type="text" name="telefone" placeholder="Telefone*" required></p>
+              </div>
+                  <p>Serviços de Interesse:<br>
+                      <input type="checkbox" name="servicos" id="gestao-de-redes-sociais" value="Gestão de Redes Sociais">
+                      <label for="gestao-de-redes-sociais">Gestão de Redes Sociais</label>
+                      <input type="checkbox" name="servicos" id="websites" value="Websites">
+                      <label for="websites">Websites</label>
+                      <input type="checkbox" name="servicos" id="video" value="Video">
+                      <label for="video">Video</label>
+                      <input type="checkbox" name="servicos" id="identidade-visual" value="Identidade Visual">
+                      <label for="identidade-visual">Identidade Visual</label>
+                  </p>
+                  <p>
+                      <label for="horario">Melhor horário para contato:</label>
+                      <select name="horario" id="horario">
+                          <!-- Este option vazio é importante para que o usuário não seja induzido a uma determinada opção padrão-->
+                          <option value=""></option>
+                          <option>Manhã</option>
+                          <option>Tarde</option>
+                          <option>Noite</option>
+                          <option>Finais de semana</option>
+                      </select>
+                  </p>
+                  <p><label for="mensagem">Mensagem (opcional): </label></p>
+                  <textarea name="mensagem" id="mensagem" cols="30" class="form-control" rows="7"
+                      placeholder="Máximo de 500 catacteres" minlength="0" maxlength="500"></textarea>
+                  <p><button type="submit">Enviar</button></p>
+                  <!-- Subindo o site para o navegador - Parte 03 (trazido la de baixo, dentro do código) -->
+                  <p id="my-form-status"></p>
+              </form>
+            </div>
+            
+        </article>
+
+        <article class="localizacao">
+            <h2>Localização</h2>
+            <p>Rua Francisco Coimbra, 403 - Penha de França <br>São Paulo/SP - CEP 03639-000 <br>
+            <a href="tel:1121350300">11-2135-0300</a>
+            </p>
+            <!-- aqui colocaremos um mapa do Google Maps -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14632.70388521654!2d-46.54902501240055!3d-23.52617245640269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e46752d26e5%3A0xfd7d34baaa261c06!2sR.%20Francisco%20Coimbra%2C%20403%20-%20Penha%20de%20Fran%C3%A7a%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003639-000!5e0!3m2!1spt-BR!2sbr!4v1664393585213!5m2!1spt-BR!2sbr" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </article>
+
+    </main>
+
+    <!-- Rodapé -->
+    <div>
+      <footer>
+          <div>
+              <p>Florescer Agência de Marketing Digital</p>
+          </div>
+          <div class="sociais">
+              <figure><a href=""><img src="imagens/facebook.png" alt="facebook"></a></figure>
+              <figure><a href=""><img src="imagens/instagram.png" alt="instagram"></a></figure>
+              <figure><a href=""><img src="imagens/youtube.png" alt="youtube"></a></figure>
+          </div>
+      
+      </footer>
+  </div>
+
+   
+
+    <script>
+        var form = document.getElementById("my-form");
+        
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var status = document.getElementById("my-form-status");
+          var data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+          }).then(response => {
+            if (response.ok) {
+              status.innerHTML = "Dados enviados";
+              form.reset()
+            } else {
+              response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                  status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                  status.innerHTML = "Oops! tivemos um problema em nosso servidor, nos chame no WhatsApp (11) 96666-6666"
+                }
+              })
+            }
+          }).catch(error => {
+            status.innerHTML = "Oops! tivemos um problema em nosso servidor, nos chame no WhatsApp (11) 96666-6666"
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
+
+</body>
+
+</html>

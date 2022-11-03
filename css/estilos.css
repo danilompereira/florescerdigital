@@ -1,0 +1,314 @@
+*{box-sizing: border-box;}
+
+
+body, h1, h2, p, figure, h3{
+    margin: 0;
+    padding: 0;
+}
+
+h3{
+    /* margin-left: 20px; */
+    text-align: center;
+    font-size: 36px;
+}
+
+h4{font-size: 24px;}
+
+
+.gestao h4{text-align: center;}
+
+
+figcaption{text-align: center;}
+
+.redessociais{
+    display: flex;
+}
+
+.depoimentos{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.redessociais figure{
+    margin-top: 100px;
+    width: 40%;
+}
+
+.redessociais figure a{color: white;}
+
+.redessociais article{
+    width: 55%;
+}
+
+#instagram{
+    flex-direction: row-reverse;
+}
+
+
+img{max-width: 100%;}
+
+body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  }
+
+a{text-decoration: none;}
+
+header{
+    text-align: center;
+    height: 100px;
+    padding-top: 0;
+}
+
+ul{font-size: 18px;}
+
+
+#topo{
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 100;
+}
+
+.efeito{
+    opacity: 50%;
+    background-color: #588157;
+}
+
+nav{
+    text-transform: uppercase;
+    margin-top: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header img{border-radius: 5px;}
+
+nav a{
+    font-weight: bold;
+    color: black;
+    padding: 10px;
+    transition: 500ms;
+}
+
+nav a:hover, nav a:focus{background-color: rgb(221, 216, 216);}
+
+/* Regras de conteúdo (articles) */
+
+
+.destaque{
+    background-color: #174141;
+    color: white;
+    height: 350px;
+    background-attachment: fixed;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 5px;
+}
+
+.destaque:hover{background: linear-gradient(45deg, #174141, #866E32);}
+
+
+
+.destaque h2{
+    font-size: 32px;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;
+}
+
+
+.imagem01 {
+    animation-name: aparecer;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+    margin-bottom: 50px;
+    margin-right: 25px;
+}
+
+.imagem02 {
+    animation-name: aparecer;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+    margin-right: 25px;
+}
+
+.imagem03 {
+    animation-name: aparecer;
+    animation-duration: 0.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode: backwards;
+    margin-bottom: 50px;
+    margin-right: 25px;
+}
+
+.imagem04 {
+    animation-name: aparecer;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+    margin-bottom: 50px;
+    margin-right: 25px;
+}
+
+.imagem05 {
+    animation-name: aparecer;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+    margin-right: 25px;
+}
+
+.imagem06 {
+    animation-name: aparecer;
+    animation-duration: 0.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode: backwards;
+    margin-bottom: 50px;
+    margin-right: 25px;
+}
+
+/* Regra de animação */
+@keyframes aparecer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+article h2{
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+article p{padding: 20px;}
+
+.localizacao{
+    text-align: center;
+}
+
+.localizacao iframe{width: 100%;}
+
+footer{
+    height: 100px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    border: solid 2px #174141;
+    border-radius: 15px;
+}
+
+
+.sociais{
+    display: flex;
+}
+
+.sociais figure{margin-left: 25px;}
+
+
+footer img{border-radius: 40%;}
+
+.conteudo{
+    background: linear-gradient(45deg, #174141, #866E32);
+    border-radius: 15px;
+    color: white;
+    padding: 10px;
+}
+
+
+.galeria img{
+    transform: scale(0.8);
+    transition: 500ms;
+    box-shadow: black 0 0 30px 5px;
+}
+
+.galeria img:hover{transform: scale(1);}
+
+
+/* Regras para o formulário */
+form{
+    background-color: #588157 ;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: black 5px 10px 15px;
+    transition: 0.5s;
+    opacity: 0.8;
+   
+}
+form:hover{opacity: 1;}
+
+
+#nome, #email, #telefone{
+    width: 100%;
+    border: none;
+    height: 30px;
+}
+
+button{
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: black 2px 2px 3px;
+    font-weight: bold;
+}
+
+input, select, text{margin-top: 5px;}
+
+button:hover, button:focus{background-color: #dee2ff;} 
+
+#mensagem{height: auto;}
+
+.imagem04 { display: none;}
+.imagem05 {display: none;}
+.imagem06 {display: none;}
+/* Regras Condicionais usando Media Queries */
+@media screen and (min-width: 530px) {
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+    }
+
+    h1{margin-left: 2vw;}
+
+    nav{margin-right: 2vw;}
+
+}
+
+@media screen and (min-width: 889px){
+    h1{font-size: 35px;}
+    header{height: 85px;}
+    nav{width: 70%;}
+    nav a{padding: 20px;}
+    .destaque{height: 550px;}
+    p{font-size: 20px;}
+    h2{font-size: 32px;}
+    .imagem01{display: none;}
+    .imagem02{display: none;}
+    .imagem03{display: none;}
+    .imagem04 { display: inline;}
+    .imagem05{display: inline;}
+    .imagem06{display: inline;}
+    .destaque h2{font-size: 48px;}   
+}
+
+@media screen and (min-width: 1000px){
+    .limitador{
+        max-width: 1000px;
+        margin: auto;
+    }
+}
