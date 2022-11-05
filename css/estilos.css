@@ -20,7 +20,7 @@ h4{font-size: 24px;}
     right: 1%;
     padding: 10px;
     z-index: 10000000;
-    scale: 0.9;
+    scale: 1;
     transition: 500ms;
 }
 
@@ -97,7 +97,12 @@ nav{
     align-items: center;
 }
 
-header img{border-radius: 5px;}
+img{border-radius: 5px;}
+
+header img{
+    border-radius: 5px;
+    box-shadow: black 0 0 10px 3px;
+}
 
 nav a{
     font-weight: bold;
@@ -110,9 +115,6 @@ nav a:hover, nav a:focus{
     background-color: rgb(221, 216, 216);
     border-radius: 5px;
 }
-
-/* Regras de conteúdo (articles) */
-
 
 .destaque{
     background-color: #174141;
@@ -216,7 +218,7 @@ article p{padding: 20px;}
 
 footer{
     height: 100px;
-    background-color: rgb(218, 218, 218);
+    background-color: rgba(185, 185, 185, 0.863);
     color: black;
     font-weight: bold;
     display: flex;
@@ -229,8 +231,6 @@ footer{
     border-radius: 15px; */
     justify-content:space-evenly;
 }
-
-
 
 .sociais{
     display: flex;
@@ -253,7 +253,7 @@ footer img{border-radius: 40%;}
 .galeria img{
     transform: scale(0.8);
     transition: 500ms;
-    box-shadow: black 0 0 30px 5px;
+    box-shadow: #d1b13e 0 0 10px 3px;
 }
 
 .galeria img:hover{transform: scale(1);}
