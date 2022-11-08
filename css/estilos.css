@@ -6,6 +6,8 @@ body, h1, h2, p, figure, h3{
     padding: 0;
 }
 
+h1{text-align: center;}
+
 h3{
     /* margin-left: 20px; */
     text-align: center;
@@ -35,9 +37,7 @@ h4{font-size: 24px;}
 
 figcaption{text-align: center;}
 
-.redessociais{
-    display: flex;
-}
+.redessociais{display: flex;}
 
 .depoimentos{
     display: flex;
@@ -49,17 +49,16 @@ figcaption{text-align: center;}
     width: 40%;
 }
 
-.redessociais figure a{color: white;}
+/* .redessociais figure a{color: white;}*/
 
 .redessociais article{
     width: 55%;
 }
 
-#instagram{
+.servs{
     flex-direction: row-reverse;
     text-align: right;
 }
-
 
 img{max-width: 100%;}
 
@@ -71,6 +70,7 @@ header{
     text-align: center;
     height: 100px;
     padding-top: 0;
+    margin-left: 10px;
 }
 
 ul{font-size: 18px;}
@@ -128,6 +128,7 @@ nav a:hover, nav a:focus{
     flex-wrap: wrap;
     align-content: center;
     margin-top: 5px;
+   
 }
 
 .destaque:hover{background: linear-gradient(45deg, #174141, #866E32);}
@@ -227,8 +228,6 @@ footer{
     text-align: center;
     flex-wrap: wrap;
     margin-top: 15px;
-    /* border: solid 2px #174141;
-    border-radius: 15px; */
     justify-content:space-evenly;
 }
 
@@ -301,6 +300,7 @@ button:hover, button:focus{background-color: #dee2ff;}
 .imagem04 { display: none;}
 .imagem05 {display: none;}
 .imagem06 {display: none;}
+
 /* Regras Condicionais usando Media Queries */
 @media screen and (min-width: 530px) {
     header{
@@ -316,7 +316,7 @@ button:hover, button:focus{background-color: #dee2ff;}
 
 }
 
-@media screen and (min-width: 889px){
+@media screen and (min-width: 800px){
     h1{font-size: 35px;}
     header{height: 85px;}
     nav{width: 70%;}
@@ -327,10 +327,31 @@ button:hover, button:focus{background-color: #dee2ff;}
     .imagem01{display: none;}
     .imagem02{display: none;}
     .imagem03{display: none;}
-    .imagem04 { display: inline;}
+    .imagem04 {display: inline;}
     .imagem05{display: inline;}
     .imagem06{display: inline;}
     .destaque h2{font-size: 48px;}   
+}
+
+
+@media screen and (min-width: 700px){
+    h1{font-size: 35px;}
+    header{
+        height: 75px; 
+        margin-left: 10px;
+    }
+    nav{width: 50%;}
+    nav a{padding: 10px;}
+    .destaque{height: 500px;}
+    p{font-size: 18px;}
+    h2{font-size: 30px;}
+    .imagem01{display: none;}
+    .imagem02{display: none;}
+    .imagem03{display: none;}
+    .imagem04 {display: inline;}
+    .imagem05{display: inline;}
+    .imagem06{display: inline;}
+    .destaque h2{font-size: 42px;}   
 }
 
 @media screen and (min-width: 1000px){
